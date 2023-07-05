@@ -1,0 +1,70 @@
+Redux is a predictable state container for javascript apps
+Components i React its own state then what need to another tool
+--------------
+React context ->Prevents prop drilling
+Redux helps state management 
+React -> React-Redux ->Redux
+A store holds the state of your application.
+An action that describes the changes in the state of the application.
+A reducer which actually carries out the transition depending on the action
+---------------------------------
+Redux priciples=>
+First Principle->The state of your whole apploication is stored in an object tree within a single store.
+Second Principle=>The only way to change the state is to emit an action,an object describing what happend.To update the state of your app,
+you need to let Redux know about that with an action.
+Not allow to directly update the state object.
+shopkeeper
+type:BUY_CAKE
+Third Principle,you write le=>To specify how the state tree is transformed by actions,you write pure reducers
+Reducer =>Reducer-(previousState,action)=>newState
+
+const i itialState ={
+numOfCakes:10
+}
+
+const reducer=(state=initialState,action)=>{
+switch(action.type){
+case BUY_CAKE:{
+...state, //first make the copy of objects 
+numOfCakes:state.numOfCakes-1
+}
+
+default:retun state;
+}
+--------------------------
+state={
+loading:true,
+data:[],
+error:' '
+
+loading->Display loading in your component
+data-List of users
+-------
+actions
+FETCH_USER_REQUEST
+FETCH_USER_SUCCESS
+FETCH_USER_ERROR    
+
+case FETCH_USER_REQUEST
+loading:true
+
+case FETCH_USER_SUCCESS
+loading:fetch api load user
+
+case FETCH_USER_ERROR
+loading:Error from api
+--------------------------
+npm i redux
+npm i react-redux
+---------------------------
+Async action creators
+axios=>Request to an api end point
+------------------------
+redux-thunk->
+De
+npm install redux-thunk
+-------------------
+Repository Name -> RduxexampleOfCakeShop
+
+
+
